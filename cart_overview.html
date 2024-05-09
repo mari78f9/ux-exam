@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="js/burger_menu.js" defer></script>
+    <script src="js/check_login.js" defer></script>
+    <script src="js/logout.js" defer></script>
+    <script src="js/cart_overview.js" defer></script>
+    <title>Ecoshoppe | Cart</title>
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/cart_overview.css">
+    <link rel="stylesheet" href="css/footer.css">
+  </head>
+  <body>
+    <header>
+        <nav>
+          <a href="products.html"><img src="img/logo.svg" alt="logo" /></a>
+          <ul class="menu_links">
+            <li><a class="link_style" href="index.html">LOGIN</a></li>
+            <li><a class="link_style" href="signup.html">SIGN UP</a></li>
+            <li><a class="link_style" href="products.html">PRODUCTS</a></li>
+            <li><button class="link_style logout_btn_desk">LOGOUT</button></li>
+            <li>
+              <a class="cart" href="cart_overview.html" aria-label="View cart"><img src="img/cart_icon.svg" alt="Icon of a shopping cart" /><span class="cart_counter"></span></a>
+            </li>
+          </ul>
+          <a id="burger_icon" aria-label="Toggle between open and closed burger menu">
+            <img class="burger_icon" src="img/burger_icon.svg" alt="Burger menu icon" />
+          </a>
+        </nav>
+        <!-- Mobile menu links - for the burger menu -->
+        <div id="mobile_menu_links">
+          <ul class="mobile_menu_links">
+            <li><a class="link_style" href="index.html">LOGIN</a></li>
+            <li><a class="link_style" href="signup.html">SIGN UP</a></li>
+            <li><a class="link_style" href="products.html">PRODUCTS</a></li>
+            <li><button class="link_style logout_btn_mobile">LOGOUT</button></li>
+            <li>
+              <a class="cart" href="cart_overview.html" aria-label="View cart"><img src="img/cart_icon.svg" alt="Icon of a shopping cart" /><span class="mobile_cart_counter"></span></a>
+            </li>
+          </ul>
+        </div>
+      </header>
+
+    <main>
+      <section id="cart_info">
+        <a class="back_btn" href="products.html">←</a>
+        <div class="cart_info_width">
+          <h1>Summary</h1>
+          <div class="summary_items">
+            <p>Items</p>
+            <p id="total_products"></p>
+          </div>
+          <div class="summary_price">
+            <p>Total</p>
+            <p id="total_price"></p>
+          </div>
+          <!-- button -->
+          <button class="btn" id="payment-page">BUY</button>
+          <div class="buying_info">
+            <p>Buying Information</p>
+            <p>You can contact us or come down to our physical store to buy the products you like.</p>
+            <div class="contact-info">
+              <p>Call us: (217) 351-2667</p>
+              <p>Meet us: 2102 N Market St, Champaign, Indiana, 61822</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="cart_overview">
+        <h2>YOUR CART</h2>
+        <div id="cart_overview"></div>
+      </section>
+    </main>
+
+    <footer>
+      <section class="footer-info">
+        <div>
+          <p>Call us: (217) 351-2667</p>
+        </div>
+        <div>
+          <p>Meet us: 2102 N Market St, Champaign, Indiana, 61822</p>
+        </div>
+      </section>
+      <section class="copy">
+        <p><span>&copy;</span> 2023 ECOSHOPPE</p>
+      </section>
+    </footer>
+  </body>
+</html>

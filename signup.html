@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/signup.js" defer></script>
+    <script src="js/burger_menu.js" defer></script>
+    <title>Ecoshoppe | Signup</title>
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/signup.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="products.html"><img src="img/logo.svg" alt="logo" /></a>
+      <ul class="menu_links">
+        <li><a class="link_style" href="index.html">LOGIN</a></li>
+        <li><a class="link_style" href="signup.html">SIGN UP</a></li>
+        <li><a class="link_style" href="products.html">PRODUCTS</a></li>
+      </ul>
+      <a id="burger_icon" aria-label="Toggle between open and closed burger menu">
+        <img class="burger_icon" src="img/burger_icon.svg" alt="Burger menu icon" />
+      </a>
+    </nav>
+    <!-- Mobile menu links - for the burger menu -->
+    <div id="mobile_menu_links">
+      <ul class="mobile_menu_links">
+        <li><a class="link_style" href="index.html">LOGIN</a></li>
+        <li><a class="link_style" href="signup.html">SIGN UP</a></li>
+        <li><a class="link_style" href="products.html">PRODUCTS</a></li>
+      </ul>
+    </div>
+  </header>
+    <main>
+        <section class="front-left">
+          <img src="img/front-img.webp" alt="signin" id="front-img" />
+          <p>Something for <span>everyone</span></p>
+        </section>
+        <section class="front-right">
+          <div class="form-login-signup">
+            <h1 id="signup-heading">Sign up</h1>
+            <p>Welcome! Sign up today and get an exclusive pass to view all of our amazing products!</p>
+            <form id="signup_form">
+              <div>
+                <label for="signup_form_email" id="signup_email_label">email</label>
+                <input type="email" id="email_signup" name="email_signup" aria-labelledby="email-label" aria-required="true" aria-placeholder="E-mail" placeholder="E-mail" required aria-live="polite" />
+                <span id="email_error" role="alert" class="hidden error_msg">*This is not a valid email</span>
+              </div>
+              <div>
+                <label for="signup_form_password" id="signup_password_label">password</label>
+                <input type="password" id="password_signup" name="password_signup" aria-live="polite" aria-labelledby="password-label" aria-required="true" aria-placeholder="Password" placeholder="Password" required />
+                <span id="password_error" role="alert" class="hidden error_msg">*8-20 characters, A, a, number, and special character.</span>
+              </div>
+              <div>
+                <label for="signup_form_confirm_password" id="signup_confirm_password_label">confirm password</label>
+                <input type="password" id="confirm_password_signup" name="confirm_password_signup" aria-live="polite" aria-labelledby="confirm_password-label" aria-required="true" aria-placeholder="Confirm password" placeholder="Confirm password" required />
+                <span id="confirm_password_error" role="alert" class="hidden error_msg">*Passwords doesn't match.</span>
+              </div>
+              <button class="btn" id="signupBtn" aria-disabled="false" aria-label="Sign up">
+                Sign up
+              </button>
+              <p>Already have a user? Login <a class="link_style visited_links" href="/" aria-label="Login">here</a></p>
+            </form>
+          </div>
+        </section>
+      </main>
+</body>
+</html>
