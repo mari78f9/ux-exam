@@ -1,0 +1,152 @@
+@import url(style.css);
+
+/* ---------- PRODUCT CARDS ---------- */
+main article {
+  width: 100vw;
+}
+
+.product_bg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  background-color: var(--color-white);
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  max-height: 500px;
+}
+
+main article img {
+  width: 50%;
+  object-fit: cover;
+}
+
+.grid_col_2 {
+  margin: 2rem 1rem;
+}
+
+.product_category {
+  color: var(--color-off-white-transparent);
+  padding-bottom: 0.5rem;
+}
+
+.product_price {
+  font-size: 1.425rem;
+  padding-top: 1rem;
+}
+
+.product_ratings {
+  margin: 0.5rem 1rem;
+  text-align: center;
+  font-size: 0.825rem;
+}
+
+.product_description {
+  max-width: 60ch;
+  padding: 1.5rem 0;
+}
+
+/* Add to cart button in singleview */
+main .add_to_cart {
+  width: 200px;
+  border-radius: 50px;
+  padding: 10px 10px 10px 30px;
+  font-family: var(--font-header);
+  font-size: 1rem;
+  text-transform: uppercase;
+  margin: 20px 0 0 0;
+  transition: 0.2s ease-in-out;
+  background-color: var(--color-green);
+  color: var(--color-white);
+  border: 2px solid var(--color-green);
+  background-image: url(../img/cart_icon.svg);
+  background-size: 14%;
+  background-position: 24% 42%;
+  background-repeat: no-repeat;
+}
+
+main .add_to_cart:hover {
+  background-color: transparent;
+  border: 2px solid var(--color-white);
+}
+
+/* --------------------------- */
+
+/* ---------- Media queries Tablet ---------- */
+@media screen and (min-width: 740px) {
+  #single_view {
+    display: flex;
+    justify-content: center;
+  }
+  main article {
+    width: 60vw;
+    margin: 3rem 0;
+  }
+
+  main article img {
+    max-width: 50%;
+  }
+
+  .grid_col_2 {
+    margin: 2rem 0;
+  }
+}
+
+/* ---------- Media queries Desktop ---------- */
+@media screen and (min-width: 1200px) {
+  main article {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    width: 70vw;
+  }
+
+  .grid_col_1 {
+    grid-column: 1/2;
+  }
+
+  .product_bg {
+    width: 35vw;
+    height: 35vw;
+  }
+
+  .grid_col_2 {
+    grid-column: 2/3;
+    margin: 0rem 0;
+  }
+
+  .product_ratings {
+    font-size: 1rem;
+  }
+}
+
+main {
+  position: relative;
+}
+
+.back_btn {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--color-white);
+  background-color: var(--color-green);
+  border-radius: 100%;
+  width: 3rem;
+  height: 3rem;
+  display: grid;
+  justify-items: center;
+  align-content: center;
+  text-decoration: none;
+}
+
+.back_btn::before {
+  position: unset;
+}
+
+.back_btn:hover {
+  background-color: var(--color-grey);
+  border: 2px solid var(--color-white);
+}

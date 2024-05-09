@@ -1,0 +1,225 @@
+@import url(style.css);
+
+/* ---------- FILTERING BUTTONS ---------- */
+#category-buttons {
+  display: grid;
+  column-gap: 1rem;
+  justify-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+  grid-template-columns: 1fr 1fr;
+}
+
+.selected {
+  background-color: transparent;
+  font-family: var(--font-header);
+  border-radius: 50px;
+  padding: 10px;
+  font-size: 1rem;
+  text-transform: uppercase;
+  border: none;
+  margin: 20px 0 0 0;
+  transition: 0.2s ease-in-out;
+  color: var(--color-white);
+  border: 2px solid var(--color-white);
+}
+
+.hidden {
+  display: none;
+}
+
+/* Style for the back to top button */
+#backToTopBtn {
+  position: fixed;
+  bottom: 2rem;
+  right: 1.5rem;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--color-white);
+  background-color: var(--color-green);
+  border-radius: 100%;
+  width: 3rem;
+  height: 3rem;
+  display: none;
+  justify-items: center;
+  align-items: center;
+  cursor: pointer;
+  border: none;
+}
+#backToTopBtn:hover {
+  background-color: var(--color-grey);
+  border: 2px solid var(--color-white);
+}
+/* ------------------- h1 size ---------------- */
+.headline_products {
+  font-size: clamp(2.195rem, 4vw, 2.8rem);
+}
+
+/* ---------- Special font size for PRODUCT CARDS ---------- */
+.product_link {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.product_title {
+  padding-top: 0.5rem;
+}
+
+.product_price {
+  font-family: var(--font-header);
+  font-size: 1.25rem;
+  cursor: default;
+}
+
+/* --------------------------- */
+
+/* ---------- SMALL HERO/SPLASH SECTION ---------- */
+#small_hero_section {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 40vh;
+  background-image: url("../img/front-img.webp");
+  background-size: cover;
+  background-position: 64% 25%;
+}
+
+/* adding the colored overlay to the small hero/splash image */
+#small_hero_section::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-dark-grey);
+  opacity: 0.5;
+  z-index: 0;
+}
+
+h1 {
+  padding: 2rem;
+  z-index: 1;
+}
+
+/* --------------------------- */
+
+/* ---------- PRODUCT CARDS ---------- */
+.products {
+  margin: 2rem;
+}
+
+#product_data {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+}
+
+#product_data article {
+  display: grid;
+  grid-template-rows: 2fr 1fr;
+  align-items: end;
+  align-content: start;
+  width: 300px;
+  height: 400px;
+}
+
+#product_data article img {
+  max-width: 50%;
+}
+
+.product_bg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 300px;
+  background-color: var(--color-white);
+  overflow: hidden;
+}
+
+/* Add to cart button */
+.add_to_cart {
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%;
+  background-color: var(--color-green);
+  border: none;
+  color: var(--color-white);
+  font-family: var(--font-paragraph);
+  padding-top: 0.2rem;
+  text-align: center;
+  background-image: url(../img/cart_icon.svg);
+  background-size: 60%;
+  background-position: 50% 45%;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.add_to_cart:hover {
+  transition-duration: 0.2s;
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+}
+
+.product_buy {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 0.5rem;
+}
+
+/* --------------------------- */
+@media screen and (min-width: 600px) {
+  #category-buttons {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+/* ---------- Media queries Tablet ---------- */
+@media screen and (min-width: 740px) {
+  #product_data {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: start;
+    justify-content: center;
+    gap: 4rem;
+  }
+
+  #product_data article {
+    width: 250px;
+  }
+
+  .product_bg {
+    width: 250px;
+    height: 250px;
+  }
+}
+
+/* ---------- Media queries Desktop ---------- */
+@media screen and (min-width: 1200px) {
+  h1 {
+    padding: 2rem 8rem;
+  }
+
+  .products {
+    margin: 2rem 8rem 8rem 8rem;
+  }
+
+  #product_data article {
+    width: 270px;
+  }
+
+  .product_bg {
+    width: 270px;
+    height: 270px;
+  }
+  #category-buttons {
+    display: flex;
+    justify-content: space-around;
+  }
+}

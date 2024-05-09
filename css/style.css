@@ -1,0 +1,159 @@
+/* While the custom font is loading, the browser will initially render the text using a fallback font */
+@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --color-grey: #353641;
+  --color-mid-grey: #2d2e3a;
+  --color-dark-grey: #1f1f26;
+  --color-dark-grey-transparent: #1f1f26c4;
+  --color-white: #ffffff;
+  --color-off-white: #fcf8ee;
+  --color-off-white-transparent: #fcf8eedf;
+  --color-green: #99ac28;
+
+  --font-header: "Anton", sans-serif;
+  --font-paragraph: "Open Sauce One", sans-serif;
+}
+
+/* Background color for all pages */
+body {
+  background-color: var(--color-grey);
+}
+
+/* Fonts */
+
+h1,
+h2,
+h3,
+h4,
+p,
+a {
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-header);
+  color: var(--color-off-white);
+}
+
+p,
+input::placeholder,
+input {
+  font-family: var(--font-paragraph);
+  color: var(--color-white);
+}
+
+h1 {
+  /* 39.51px */
+  font-size: 2.195rem;
+}
+
+h2 {
+  /* 34.66px */
+  font-size: 1.925rem;
+}
+
+h3 {
+  /* 30.4px */
+  font-size: 1.689rem;
+}
+
+h4 {
+  /* 26.67px */
+  font-size: 1.482rem;
+}
+
+button {
+  font-size: 1.2rem;
+}
+
+p,
+a {
+  /* 18px */
+  font-size: 1rem;
+}
+
+img{
+    object-fit: cover;
+}
+
+.link_style {
+  text-decoration: none;
+  margin: 0 2px;
+  position: relative;
+}
+
+.link_style:before {
+  position: absolute;
+  margin: 0 auto;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--color-green);
+  content: "";
+  opacity: 0.3;
+  transform: scale(0.9);
+  -webkit-transform: scaleX(0.9);
+  transition-property: opacity, -webkit-transform;
+  transition-duration: 0.3s;
+}
+
+.link_style:hover:before {
+  opacity: 1;
+  transform: scale(1);
+  -webkit-transform: scaleX(1);
+}
+
+.visited_links:visited{
+  color: var(--color-green);
+}
+/* --------------- BUTTONS --------------- */
+.btn {
+  width: 100%;
+  font-family: var(--font-header);
+  border-radius: 50px;
+  padding: 10px;
+  font-size: 1rem;
+  text-transform: uppercase;
+  border: none;
+  margin: 20px 0 0 0;
+  transition: 0.2s ease-in-out;
+  background-color: var(--color-green);
+  color: var(--color-white);
+  border: 2px solid var(--color-green);
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: transparent;
+  border: 2px solid var(--color-white);
+}
+
+.btn .svg-right {
+  margin: 0 0 0 5px;
+  vertical-align: middle;
+}
+
+.btn .svg-left {
+  margin: 0 5px 0 0;
+  vertical-align: middle;
+}
+
+.btn-small {
+  width: 150px;
+}
+
+.btn-medium {
+  width: 200px;
+}

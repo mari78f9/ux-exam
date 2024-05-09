@@ -1,0 +1,33 @@
+@import url(style.css);
+
+footer {
+    padding: 2rem;
+    background-color: var(--color-dark-grey);
+    display: grid;
+    gap: 2rem;
+    justify-items: center;
+  }
+
+  .footer-info {
+    text-align: center;
+  }
+  
+  .copy p {
+    font-family: var(--font-header);
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    justify-content: center;
+  }
+  
+  .copy > p span {
+    font-size: 1.4rem;
+  }
+  
+  @media only screen and (min-width: 500px) {
+    footer {
+      padding: 2rem;
+      justify-items: unset;
+    }
+  }
+  

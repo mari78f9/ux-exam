@@ -1,0 +1,124 @@
+@import url(style.css);
+
+/* ---------- MOBILE NAVIGATION (burger menu) ---------- */
+nav {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: var(--color-dark-grey);
+  height: 10vh;
+}
+
+.burger_icon {
+  width: 1.875rem;
+}
+
+.logo {
+  width: 50vw;
+}
+
+.cart img {
+  width: 2rem;
+}
+
+.hide {
+  display: none;
+}
+
+.mobile_menu_links {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: var(--color-dark-grey);
+  border-top: 1.5px solid var(--color-grey);
+  padding: 0.5rem 2rem;
+}
+
+header a,
+.logout_btn_desk,
+.logout_btn_mobile {
+  text-decoration: none;
+  color: var(--color-off-white);
+  font-family: var(--font-header);
+  font-size: 1.3rem;
+}
+
+header a:before {
+  position: unset;
+}
+
+.logout_btn_desk,
+.logout_btn_mobile {
+  background-color: var(--color-dark-grey);
+  border: none;
+  cursor: pointer;
+}
+
+li {
+  list-style: none;
+}
+
+.menu_links {
+  display: none;
+}
+
+/* The counter besides the cart icon - showing when adding products */
+.cart_counter,
+.mobile_cart_counter {
+  font-family: var(--font-paragraph);
+  font-size: 0.8rem;
+  color: var(--color-green);
+}
+
+/* --------------------------- */
+
+/* ---------- Media queries Tablet ---------- */
+@media screen and (min-width: 740px) {
+  nav {
+    padding: 1rem 2rem;
+  }
+
+  .logo {
+    width: 30vw;
+  }
+
+  .menu_links {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 2.5rem;
+  }
+
+  .mobile_menu_links {
+    display: none;
+  }
+
+  #burger_icon {
+    display: none;
+  }
+  header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+  }
+}
+
+/* ---------- Media queries Desktop ---------- */
+@media screen and (min-width: 1200px) {
+  nav {
+    padding: 1rem 4rem;
+  }
+
+  .logo {
+    width: 20vw;
+  }
+
+  a,
+  .logout_btn_desk,
+  .logout_btn_mobile {
+    font-size: 1.3rem;
+  }
+}
